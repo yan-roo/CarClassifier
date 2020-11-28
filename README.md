@@ -27,11 +27,19 @@ pip3 install -r requirements.txt
 cd CarClassifier
 kaggle competitions download -c cs-t0828-2020-hw1
 unzip cs-t0828-2020-hw1
+python dataset.py
 ```
 ```
 CarClassifier
-  +- training_data
-  +- testing_data
-  +- cs-t0828-2020-hw1.zip
+  +- training_data/
+  +- testing_data/
+  +- training_labels.csv
+  +- tmp/
+  +- log/
+  +- cutmix_keras.py
+  +- dataset.py
+  +- EfficientNetB7.ipynb
+  +- Normalization_testing.ipynb
+  +- panda.jpg
+  +- ResNet50.ipynb
 ```
-
