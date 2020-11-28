@@ -43,3 +43,21 @@ CarClassifier
   +- panda.jpg
   +- ResNet50.ipynb
 ```
+
+## Results
+
+|               Model               | Size | Batch |     Methods     | Testing Accuracy |
+| --------------------------------- | ---- | ----- |---------------- | ---------------- |
+|       ResNet50                    |  256 |  16   |   Hflip only    |       0.89       |
+|   EfficientNetB3                  |  456 |  16   |   + Rotate 10   |       0.915      |
+|   EfficientNetB7                  |  456 |  4    |                 |       0.932      |
+|   EfficientNetB7                  |  456 |  4    |   AutoAugment   |       0.944      |
+|   EfficientNetB7                  |  456 |  4    | wd1e-3 to 1e-4  |       0.949      |
+|   EfficientNetB7                  |  456 |  4    | wd1e-4 to 1e-5  |       0.951      |
+|   EfficientNetB7                  |  456 |  4    |   + RAdam       |       0.952      |
+|   EfficientNetB7                  |  456 |  4    | + SGD_Lookahead |       0.954      |
+|   EfficientNetB7                  |  600 |  4    |  + Cutout       |       0.956      |
+|   EfficientNetB7 (noisy-student)  |  600 |  4    |- Cutout + Mixup |       0.959      |
+|   EfficientNetB7 (noisy-student)  |  600 |  4    | + Dropout 0.5   |       0.9594     |
+
+
